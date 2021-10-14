@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /* Primary Text */
+    --very_dark_desaturated_blue: hsl(238, 29%, 16%);
+    --soft_red: hsl(14, 88%, 65%);
+
+    /* Background gradient: */
+    --soft_violet: hsl(273, 75%, 66%);
+    --soft_blue: hsl(240, 73%, 65%);
+
+    /* Neutral Text */
+    --very_dark_grayish_blue: hsl(237, 12%, 33%);
+    --dark_grayish_blue: hsl(240, 6%, 50%);
+    
+    /*  Dividers */
+    --light_grayish_blue: hsl(240, 5%, 91%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    font-family: Kumbh Sans, sans-serif;
+    color: var(--very_dark_desaturated_blue);
+}
+
+body {
+    font-size: 12px;
+    background-color: var(--soft_violet);
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.card {
+    position: relative;
+    width: 330px;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 1.5rem;
+}
+
+.card .top::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/illustration-woman-online-mobile.svg), url(../assets/bg-pattern-mobile.svg);
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.card .top {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.card .top h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.questions {
+    width: 100%;
+}
+
+.questions li {
+    width: 100%;
+}
+
+
+.questions li h2 {
+    margin: .8rem 0;
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.questions li h2::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/icon-arrow-down.svg);
+}
+
+.questions li p {
+    font-size: .7rem;
+    color: var(--dark_grayish_blue);
+    margin: .5rem 0;
+}
+
+.questions li .divider {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid var(--light_grayish_blue);;
+}
