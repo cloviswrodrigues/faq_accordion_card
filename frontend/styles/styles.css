@@ -37,7 +37,7 @@ body {
     background-color: var(--soft_violet);
     display: flex;
     justify-content: center;
-    padding: 3rem 0;
+    padding-top: 8rem;
 }
 
 .card {
@@ -46,30 +46,32 @@ body {
     background-color: #fff;
     border-radius: 25px;
     padding: 1.5rem;
+    z-index: 0;
 }
 
-.card .top::before {
-    content: '';
+.card .top{
     position: absolute;
+    top: -105px;
+    left: 0;
+    right: 0;
     width: 100%;
-    height: 100%;
+    height: 215px;
     background-image: url(../assets/illustration-woman-online-mobile.svg), url(../assets/bg-pattern-mobile.svg);
-    background-size: 50% 50%;
+    background-size: auto;
     background-repeat: no-repeat;
+    background-position: 30% 0, 50px 110px;
+    z-index: 1;
 }
 
 .card .top {
     width: 100%;
-    height: 140px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
 }
 
-.card .top h1 {
+.card h1 {
     font-size: 2rem;
+    margin-top: 6.5rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .questions {
@@ -87,6 +89,8 @@ body {
     align-items: center;
 }
 
+
+
 .questions li h2 {
     display: inline-block;
     margin: .8rem 0;
@@ -103,13 +107,24 @@ body {
 }
 
 .questions li p {
+    display: none;
     font-size: .7rem;
     color: var(--dark_grayish_blue);
     margin-bottom: .8rem;
+    opacity: 0;
 }
 
 .questions li .divider {
     width: 100%;
     height: 1px;
     border-bottom: 1px solid var(--light_grayish_blue);;
+}
+
+.bold {
+    font-weight: 700 !important;
+}
+
+.show {
+    display: block !important;
+    opacity: 1 !important;
 }
