@@ -77,27 +77,35 @@ body {
 }
 
 .questions li {
+    position: relative;
     width: 100%;
 }
 
+.questions li .asking {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .questions li h2 {
+    display: inline-block;
     margin: .8rem 0;
     font-size: .8rem;
     font-weight: 400;
 }
 
-.questions li h2::after {
-    content: '';
-    width: 50px;
-    height: 50px;
-    background-image: url(../assets/icon-arrow-down.svg);
+.questions li .asking .arrow{
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background: url(../assets/icon-arrow-down.svg) no-repeat;
+    background-size: auto;
 }
 
 .questions li p {
     font-size: .7rem;
     color: var(--dark_grayish_blue);
-    margin: .5rem 0;
+    margin-bottom: .8rem;
 }
 
 .questions li .divider {
