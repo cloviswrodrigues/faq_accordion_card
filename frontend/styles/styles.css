@@ -33,11 +33,15 @@ html {
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     font-size: 12px;
-    background-color: var(--soft_violet);
+    background: rgb(101,101,231);
+    background: linear-gradient(0deg, var(--soft_blue) 0%, var(--soft_violet) 100%);
     display: flex;
     justify-content: center;
     padding-top: 8rem;
+    padding-bottom: 6rem;
 }
 
 .card {
@@ -69,8 +73,8 @@ body {
 
 .card h1 {
     font-size: 2rem;
-    margin-top: 6.5rem;
-    margin-bottom: 1rem;
+    margin-top: 6rem;
+    margin-bottom: .5rem;
     text-align: center;
 }
 
@@ -89,13 +93,15 @@ body {
     align-items: center;
 }
 
-
-
 .questions li h2 {
     display: inline-block;
     margin: .8rem 0;
     font-size: .8rem;
     font-weight: 400;
+}
+
+.questions li h2:hover {
+    color: var(--soft_red);
 }
 
 .questions li .asking .arrow{
@@ -110,6 +116,7 @@ body {
     display: none;
     font-size: .7rem;
     color: var(--dark_grayish_blue);
+    line-height: 1.2rem;
     margin-bottom: .8rem;
     opacity: 0;
 }
@@ -127,4 +134,8 @@ body {
 .show {
     display: block !important;
     opacity: 1 !important;
+}
+
+.rotate {    
+    transform: rotate(180deg);
 }
