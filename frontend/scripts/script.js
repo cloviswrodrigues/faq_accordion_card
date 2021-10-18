@@ -10,21 +10,23 @@ askings.forEach(element => {
 
 function showAsking(){    
     let elementCliked = this;
-    hideAllAskings(elementCliked.children[1]);
+    hideAllAskings(elementCliked);
     removeBoldH2(elementCliked.children[0].children[0]);
     removeRotateArrows(elementCliked.children[0].children[1]);
 
     elementCliked.children[0].children[0].classList.toggle("bold");
     elementCliked.children[0].children[1].classList.toggle("rotate");
-    elementCliked.children[1].classList.toggle("show");
+    elementCliked.classList.toggle("show_answer");
+    elementCliked.classList.toggle("hidden_answer");
 }
 
 
 function hideAllAskings(elementCliked){
-    p.forEach(e => {
+    askings.forEach(e => {
         //console.log("e: "+JSON.stringify(e));
         if(e != elementCliked){            
-            e.classList.remove("show");
+            e.classList.remove("show_answer");
+            e.classList.add("hidden_answer");
         }
     })
 }

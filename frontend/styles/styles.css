@@ -86,6 +86,9 @@ body {
 .questions li {
     position: relative;
     width: 100%;
+    height: 45px;
+    border-bottom: 1px solid var(--light_grayish_blue);
+    overflow: hidden;
 }
 
 .questions li .asking {
@@ -114,12 +117,10 @@ body {
 }
 
 .questions li p {
-    display: none;
     font-size: .7rem;
     color: var(--dark_grayish_blue);
     line-height: 1.2rem;
-    margin-bottom: .8rem;
-    opacity: 0;   
+    margin-bottom: .8rem;  
 }
 
 .questions li .divider {
@@ -132,9 +133,14 @@ body {
     font-weight: 700 !important;
 }
 
-.show {
-    display: block !important;
-    opacity: 1 !important;
+.show_answer {    
+    animation: showAnswer 1s linear;    
+    animation-fill-mode: forwards;
+}
+
+.hidden_answer {    
+    animation: hiddenAnswer .5s linear;    
+    animation-fill-mode: forwards;
 }
 
 .rotate {    
@@ -184,4 +190,18 @@ body {
         margin-top: 0;
         text-align: left;
     }
+}
+
+@keyframes showAnswer {
+    0% { height: 45px; }
+    25% { height: 60px; }
+    50% { height: 75px; }
+    100% { height: 95px; }
+}
+
+@keyframes hiddenAnswer {
+    0% { height: 95px; }
+    25% { height: 75px; }
+    50% { height: 60px; }
+    100% { height: 45px; }
 }
