@@ -118,7 +118,7 @@ body {
     color: var(--dark_grayish_blue);
     line-height: 1.2rem;
     margin-bottom: .8rem;
-    opacity: 0;
+    opacity: 0;   
 }
 
 .questions li .divider {
@@ -145,22 +145,42 @@ body {
     .card {
         display: flex;
         width: 700px;
-        height: 400px;
+        height: 380px;
+        padding: 0;
     }
 
     .card .top {        
-        position: inherit;
-        top: 0;
-        bottom: 0;
-        right: 30px;
+        position: initial;
         width: 50%;
+        height:  100%;
+        background-image: url(../assets/illustration-woman-online-desktop.svg)
+                        ,url(../assets/bg-pattern-desktop.svg);
+        background-position: right 60px top 50%
+                        ,right 70px bottom -100px;
+        background-size: 100%, 200%;
+    }
+
+    .card .top:after {       
+        content: '';
+        position: absolute;
+        top: 39%;
+        left: -11%;
+        width: 50%;
+        height: 100%;
+        background-image: url(../assets/illustration-box-desktop.svg);
+        background-position: left 0 top 0;
+        background-size: 45%;
+        background-repeat: no-repeat;
     }
 
     .card .faq {
         width: 50%;
+        padding: 3rem 5rem 3rem 0;
     }
 
     .card .faq h1 {
-        margin-top: 2rem;
+        font-size: 1.5rem;
+        margin-top: 0;
+        text-align: left;
     }
 }
