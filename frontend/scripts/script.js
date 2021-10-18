@@ -12,6 +12,7 @@ function showAsking(){
     let elementCliked = this;
     hideAllAskings(elementCliked.children[1]);
     removeBoldH2(elementCliked.children[0].children[0]);
+    removeRotateArrows(elementCliked.children[0].children[1]);
 
     elementCliked.children[0].children[0].classList.toggle("bold");
     elementCliked.children[0].children[1].classList.toggle("rotate");
