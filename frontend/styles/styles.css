@@ -139,12 +139,18 @@ body {
 }
 
 .hidden_answer {    
-    animation: hiddenAnswer .5s linear;    
+    animation: hiddenAnswer 1s linear;    
     animation-fill-mode: forwards;
 }
 
 .rotate {    
-    transform: rotate(180deg);
+    animation: rotateArrow 1s linear;    
+    animation-fill-mode: forwards;    
+}
+
+.no_rotate {    
+    animation: noRotateArrow 1s linear;    
+    animation-fill-mode: forwards;    
 }
 
 
@@ -204,4 +210,18 @@ body {
     25% { height: 75px; }
     50% { height: 60px; }
     100% { height: 45px; }
+}
+
+@keyframes rotateArrow {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(45deg); }
+    50% { transform: rotate(90deg); }
+    100% { transform: rotate(180deg); }
+}
+
+@keyframes noRotateArrow {
+    0% { transform: rotate(180deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(45deg); }
+    100% { transform: rotate(0deg); }
 }

@@ -16,6 +16,7 @@ function showAsking(){
 
     elementCliked.children[0].children[0].classList.toggle("bold");
     elementCliked.children[0].children[1].classList.toggle("rotate");
+    elementCliked.children[0].children[1].classList.toggle("no_rotate");
     elementCliked.classList.toggle("show_answer");
     elementCliked.classList.toggle("hidden_answer");
 }
@@ -43,6 +44,7 @@ function removeRotateArrows(elementCliked){
     arrow.forEach(e => {
         if(e != elementCliked){
             e.classList.remove("rotate");
+            e.classList.add("no_rotate");
         }
     })
 }
